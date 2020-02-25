@@ -14,7 +14,7 @@ export default class ErrorPage extends React.Component<void, IErrorPageState> {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/api/oups')
+    fetch('http://petclinic-dev.us-west-2.elasticbeanstalk.com//api/oups')
       .then(response => response.json())
       .then(error => this.setState({error}));
   }
