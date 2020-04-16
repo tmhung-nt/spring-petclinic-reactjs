@@ -48,7 +48,7 @@ public class ClinicServiceSpringDataJpaTests {
         Collection<Owner> owners = this.clinicService.findOwnerByLastName("Davis");
         assertThat(owners.size()).isEqualTo(2);
 
-        owners = this.clinicService.findOwnerByLastName("Daviss");
+        owners = this.clinicService.findOwnerByLastName("Davis");
         assertThat(owners.isEmpty()).isTrue();
     }
 
