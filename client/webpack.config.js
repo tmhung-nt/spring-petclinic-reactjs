@@ -24,6 +24,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
+      // __API_SERVER_URL__: JSON.stringify('http://petclinic-dev.us-west-2.elasticbeanstalk.com')
       __API_SERVER_URL__: JSON.stringify('http://localhost:8080')
     })
   ],
