@@ -4,7 +4,8 @@ ALTER DATABASE petclinic
   DEFAULT CHARACTER SET utf8
   DEFAULT COLLATE utf8_general_ci;
 
-# GRANT ALL PRIVILEGES ON petclinic.* TO pc@localhost IDENTIFIED BY 'pc';
+GRANT ALL PRIVILEGES ON petclinic.* TO petclinic@localhost IDENTIFIED BY 'pzV{3qD:W>}(Z~C}';
+FLUSH PRIVILEGES ;
 
 USE petclinic;
 

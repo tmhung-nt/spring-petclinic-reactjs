@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-
+const API_SERVER_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8080';
 const port = process.env.PORT || 3000;
 
 const entries = [
@@ -24,8 +24,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      // __API_SERVER_URL__: JSON.stringify('http://petclinic-dev.us-west-2.elasticbeanstalk.com')
-      __API_SERVER_URL__: JSON.stringify('http://localhost:8080')
+      __API_SERVER_URL__: JSON.stringify(API_SERVER_URL)
     })
   ],
   resolve: {

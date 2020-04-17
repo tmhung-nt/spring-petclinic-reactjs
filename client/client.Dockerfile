@@ -1,5 +1,5 @@
 #### Stage 1: Build the react application
-FROM node:12.4.0-alpine as build
+FROM node:12.13.1 as build
 
 # Configure the main working directory inside the docker image.
 # This is the base directory used in any further RUN, COPY, and ENTRYPOINT
@@ -10,7 +10,7 @@ WORKDIR /app
 # the dependencies. This is a separate step so the dependencies
 # will be cached unless changes to one of those two files
 # are made.
-COPY package.json  ./
+COPY package.json package-lock.json  ./
 RUN npm install
 
 # Copy the main application

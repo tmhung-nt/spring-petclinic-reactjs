@@ -25,7 +25,7 @@ services:
       context: client # Use an image built from the specified dockerfile in the `client` directory.
       dockerfile: client.Dockerfile
       args:
-        REACT_APP_API_BASE_URL: http://127.0.0.1:8080/api
+        REACT_APP_API_BASE_URL: http://localhost:8080
     ports:
       - "3000:80" # Forward the exposed port 80 on the container to port 80 on the host machine
     restart: always
@@ -48,13 +48,13 @@ services:
       TZ: Asia/Bangkok
     volumes:
       - ./petclinic.sql:/docker-entrypoint-initdb.d/dump.sql
-      - db-data:/var/lib/mysql
+#      - db-data:/var/lib/mysql
     networks:
       - backend
 
 # Volumes
-volumes:
-  db-data:
+#volumes:
+#  db-data:
 
 # Networks to be created to facilitate communication between containers
 networks:
